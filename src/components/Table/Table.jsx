@@ -34,7 +34,7 @@ export default class Table extends Component {
     const { columns = [] } = this.props;
     return (
       <thead>
-        <tr>{columns.map(column => (<th key={column.title} >{column.title}</th>))}</tr>
+        <tr>{columns.map(column => (<td key={column.title} >{column.title}</td>))}</tr>
       </thead>
     );
   }
@@ -65,6 +65,19 @@ export default class Table extends Component {
   }
 
   /**
+   * render 'no data' message
+   * @return {p} element with message or null
+   */
+  renderNoData() {
+    const { data } = this.props;
+    if (data && data.length > 0) {
+      return null;
+    }
+
+    return (<p>No data</p>);
+  }
+
+  /**
    * render method
    * @return {table} Table
    */
@@ -75,6 +88,7 @@ export default class Table extends Component {
           {this.renderHeader()}
           {this.renderBody()}
         </table>
+        {this.renderNoData()}
       </div>
     );
   }

@@ -2,7 +2,9 @@
   "parser": "babel-eslint",
   "extends": "airbnb",
   "globals": {
-    "it": true
+    "it": true,
+    "describe": true,
+    "expect": true
   },
   "env": {
     "browser": true
