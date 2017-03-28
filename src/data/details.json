@@ -1,0 +1,47 @@
+{
+  "1": {
+    "group_name": "URL",
+    "individualize": true,
+    "impressions": 1000
+  },
+  "2": {
+    "group_name": "URL 2",
+    "individualize": true,
+    "impressions": 500
+  },
+  "3": {
+    "group_name": "Funnel",
+    "individualize": false,
+    "impressions": 2000
+  },
+  "4": {
+    "group_name": "Network",
+    "individualize": true,
+    "impressions": 1000
+  },
+  "5": {
+    "group_name": "URL",
+    "individualize": true,
+    "impressions": 800
+  },
+  "6": {
+    "group_name": "Network",
+    "individualize": false,
+     "impressions": 1000
+  },
+  "7": {
+    "group_name": "Overlap",
+    "individualize": true,
+    "impressions": 4000
+  },
+  "8": {
+    "group_name": "Viewable",
+    "individualize": false,
+    "impressions": 5000
+  },
+  "10": {
+    "group_name": "Custom Tactic",
+    "individualize": true,
+    "impressions": 7000
+  }
+}

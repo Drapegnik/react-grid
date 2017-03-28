@@ -1,0 +1,24 @@
+{
+  "name": "react-grid",
+  "version": "0.1.0",
+  "description": "Simple data table with React",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Drapegnik/react-grid.git"
+  },
+  "author": "Ivan Pazhitnykh <ivan.pazhitnykh@gmail.com> (http://github.com/drapegnik)",
+  "license": "MIT"
+}

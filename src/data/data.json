@@ -1,0 +1,103 @@
+[
+  {
+    "id": "1",
+    "tool": "Strategy Setup System",
+    "initiator": {
+      "id": "100735",
+      "name": "Test Opti"
+    },
+    "result": "completed",
+    "duration": 2670
+  },
+  {
+    "id": "2",
+    "tool": "Strategy Setup System",
+    "initiator": {
+      "id": "100735",
+      "name": "Test Opti"
+    },
+    "result": "completed",
+    "duration": 505
+  },
+  {
+    "id": "3",
+    "tool": "Strategy Setup System",
+    "initiator": {
+      "id": "100733",
+      "name": "Optimization Analyst"
+    },
+    "result": "completed",
+    "duration": 748
+  },
+  {
+    "id": "4",
+    "tool": "Strategy Setup System",
+    "initiator": {
+      "id": "100735",
+      "name": "Test Opti"
+    },
+    "result": "completed",
+    "duration": 801
+  },
+  {
+    "id": "5",
+    "tool": "Circuit Breaker",
+    "initiator": {
+      "id": "100735",
+      "name": "Test Opti"
+    },
+    "result": "completed",
+    "duration": 5423
+  },
+  {
+    "id": "6",
+    "tool": "Strategy Setup System",
+    "timestamp": 1485954064740,
+    "initiator": {
+      "id": "100733",
+      "name": "Optimization Analyst"
+    },
+    "result": "failed",
+    "duration": 5881
+  },
+  {
+    "id": "7",
+    "tool": "Strategy Setup System",
+    "initiator": {
+      "id": "100735",
+      "name": "Test Opti"
+    },
+    "result": "completed",
+    "duration": 564
+  },
+  {
+    "id": "8",
+    "tool": "Strategy Setup System",
+    "initiator": {
+      "id": "100735",
+      "name": "Test Opti"
+    },
+    "result": "completed",
+    "duration": 23792
+  },
+  {
+    "id": "9",
+    "tool": "Strategy Setup System",
+    "initiator": {
+      "id": "100734",
+      "name": "Test Opti 2"
+    },
+    "result": "failed",
+    "duration": 450
+  },
+  {
+    "id": "10",
+    "tool": "Circuit Breaker",
+    "initiator": {
+      "id": "100733",
+      "name": "Optimization Analyst"
+    },
+    "result": "completed",
+    "duration": 276
+  }
+]
