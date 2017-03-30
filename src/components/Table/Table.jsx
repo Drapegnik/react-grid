@@ -26,28 +26,35 @@ export default class Table extends Component {
         formatter: PropTypes.func,
       }),
     ).isRequired,
-    activeDetailsId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    activeDetailsIds: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
   };
 
   static defaultProps = {
-    activeDetailsId: -1,
+    activeDetailsIds: [],
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      activeDetailsId: this.props.activeDetailsId,
+      activeDetailsIds: this.props.activeDetailsIds,
     };
 
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(id) {
-    const nextId = this.state.activeDetailsId === `details-${id}` ? -1 : `details-${id}`;
+    const nextId = `details-${id}`;
 
-    this.setState({
-      activeDetailsId: nextId,
+    this.setState((prevState) => {
+      let newIds = [];
+      if (prevState.activeDetailsIds.includes(nextId)) {
+        newIds = prevState.activeDetailsIds.filter(activeId => activeId !== nextId);
+      } else {
+        newIds = prevState.activeDetailsIds.concat(nextId);
+      }
+
+      return { activeDetailsIds: newIds };
     });
   }
 
@@ -73,7 +80,7 @@ export default class Table extends Component {
     const { columns = [], data = [] } = this.props;
     return (<tbody>{
       data.map((row) => {
-        const show = (row.type !== 'details') || row.id === this.state.activeDetailsId;
+        const show = (row.type !== 'details') || this.state.activeDetailsIds.includes(row.id);
         return (
           <Row
             onClick={this.handleClick}
