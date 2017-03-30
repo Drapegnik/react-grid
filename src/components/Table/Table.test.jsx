@@ -13,7 +13,7 @@ describe('Render Table without data', () => {
   it('Should be rendered an empty without columns and data', () => {
     expect(wrapper.find('table').length).toEqual(1);
     expect(wrapper.find('tbody tr').length).toEqual(0);
-    expect(wrapper.find('thead tr td').length).toEqual(0);
+    expect(wrapper.find('thead tr th').length).toEqual(0);
   });
 
   it('Should be rendered no data message', () => {
@@ -29,7 +29,7 @@ describe('Render Table without data', () => {
     const wrapper2 = mount(<Table {...tableData2} />);
     expect(wrapper2.find('table').length).toEqual(1);
     expect(wrapper2.find('tbody tr').length).toEqual(0);
-    expect(wrapper2.find('thead tr td').length).toEqual(3);
+    expect(wrapper2.find('thead tr th').length).toEqual(3);
   });
 });
 
@@ -74,6 +74,6 @@ describe('Render Table wit data', () => {
   it('Should be rendered with 3 columns and 3 rows', () => {
     expect(wrapper.find('table').length).toEqual(1);
     expect(wrapper.find('tbody tr').length).toEqual(4);
-    expect(wrapper.find('thead tr td').length).toEqual(3);
+    expect(wrapper.find('thead tr th').length).toEqual(3);
   });
 });

@@ -1,8 +1,8 @@
 {
-  "name": "Table",
+  "name": "DetailsRow",
   "version": "0.0.0",
   "private": true,
-  "main": "./Table.jsx",
+  "main": "./Row.jsx",
   "dependencies": {
     "enzyme": "^2.8.0",
     "react": "^15.4.2"

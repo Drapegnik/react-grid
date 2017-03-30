@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
+import Row from '../Row';
+
 /**
  * Reusable Table component
  */
@@ -34,10 +36,11 @@ export default class Table extends Component {
     const { columns = [] } = this.props;
     return (
       <thead>
-        <tr>{columns.map(column => (<td key={column.title} >{column.title}</td>))}</tr>
+        <tr>{columns.map(column => (<th key={column.title} >{column.title}</th>))}</tr>
       </thead>
     );
   }
+
 
   /**
    * render body method
@@ -45,23 +48,7 @@ export default class Table extends Component {
    */
   renderBody() {
     const { columns = [], data = [] } = this.props;
-    return (
-      <tbody>
-        {
-          data.map(row => (
-            <tr key={row.id} >
-              {columns.map((column) => {
-                const key = `${column.title}-${row.id}`;
-                const formatter = column.formatter || (o => o.toString());
-                const value = formatter(row[column.title]);
-
-                return (<td key={key} >{value}</td>);
-              })}
-            </tr>
-          ))
-        }
-      </tbody>
-    );
+    return (<tbody>{data.map(row => <Row key={row.id} columns={columns} data={row} />)}</tbody>);
   }
 
   /**

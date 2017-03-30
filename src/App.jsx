@@ -17,6 +17,8 @@ function App() {
     { title: 'duration', formatter: o => `${o}ms` },
   ];
 
+  const tableData = { data, columns };
+
   return (
     <div className="App" >
       <div className="App-header" >
@@ -24,7 +26,7 @@ function App() {
         <h2>Hello from React-grid</h2>
       </div>
       <div className="App-intro" >
-        <Table data={data} columns={columns} />
+        <Table {...tableData} />
       </div>
     </div>
   );
