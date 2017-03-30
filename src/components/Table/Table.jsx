@@ -26,7 +26,30 @@ export default class Table extends Component {
         formatter: PropTypes.func,
       }),
     ).isRequired,
+    activeDetailsId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   };
+
+  static defaultProps = {
+    activeDetailsId: -1,
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      activeDetailsId: this.props.activeDetailsId,
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(id) {
+    const nextId = this.state.activeDetailsId === `details-${id}` ? -1 : `details-${id}`;
+
+    this.setState({
+      activeDetailsId: nextId,
+    });
+  }
 
   /**
    * render header method
@@ -48,7 +71,19 @@ export default class Table extends Component {
    */
   renderBody() {
     const { columns = [], data = [] } = this.props;
-    return (<tbody>{data.map(row => <Row key={row.id} columns={columns} data={row} />)}</tbody>);
+    return (<tbody>{
+      data.map((row) => {
+        const show = (row.type !== 'details') || row.id === this.state.activeDetailsId;
+        return (
+          <Row
+            onClick={this.handleClick}
+            show={show} key={row.id}
+            columns={columns}
+            data={row}
+          />
+        );
+      })
+    }</tbody>);
   }
 
   /**

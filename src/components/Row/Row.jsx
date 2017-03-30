@@ -7,14 +7,15 @@ import React, { PropTypes } from 'react';
  * @return {td} Table row
  */
 const Row = (props) => {
-  const { columns, data } = props;
+  const { columns, data, show, onClick } = props;
 
-  if (!data) {
+  if (!data || !show) {
     return null;
   }
 
   return (
-    <tr hidden={data.hide} >
+    // eslint-disable-next-line react/jsx-no-bind, jsx-a11y/no-static-element-interactions
+    <tr onClick={onClick.bind(null, data.id)} >
       {columns.map((column) => {
         const key = `${column.title}-${data.id}`;
         const formatter = column.formatter || (o => o.toString());
@@ -39,8 +40,8 @@ const Row = (props) => {
  * * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString}
  * @property {Object} data object with {@link Table#propTypes#columns} keys
  * @property {String} data.id unique key
- * @property {Boolean} data.hide flag to decide hide or show table row
  * @property {Boolean} data.notFormat-{columnTitle} - pass false, if don't need to format this data
+ * @property {Boolean} show flag to decide hide or show table row
  */
 Row.propTypes = {
   data: PropTypes.shape({
@@ -53,6 +54,12 @@ Row.propTypes = {
       formatter: PropTypes.func,
     }),
   ).isRequired,
+  show: PropTypes.bool,
+  onClick: PropTypes.func.isRequired,
+};
+
+Row.defaultProps = {
+  show: true,
 };
 
 export default Row;

@@ -24,7 +24,7 @@ const addDetailsToData = (titles, data, details) => {
     const rawDetail = details[row.id] || {};
     const detail = {
       id: `details-${row.id}`,
-      hide: true,
+      type: 'details',
     };
 
     Object.keys(rawDetail).forEach((key, ind) => {
