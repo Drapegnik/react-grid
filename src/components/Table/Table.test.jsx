@@ -33,7 +33,7 @@ describe('Render Table without data', () => {
   });
 });
 
-describe('Render Table wit data', () => {
+describe('Render Table with data', () => {
   const tableData = {
     columns: [{ title: 'first' }, { title: 'second' }, { title: 'third' }],
     data: [
