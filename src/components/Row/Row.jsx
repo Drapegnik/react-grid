@@ -1,5 +1,7 @@
 import React, { PropTypes } from 'react';
 
+import './Row.css';
+
 /**
  * Reusable Row stateless component
  *
@@ -7,7 +9,7 @@ import React, { PropTypes } from 'react';
  * @return {td} Table row
  */
 const Row = (props) => {
-  const { columns, data, show, onClick } = props;
+  const { columns, data, show, onClick, className } = props;
 
   if (!data || !show) {
     return null;
@@ -15,7 +17,8 @@ const Row = (props) => {
 
   return (
     // eslint-disable-next-line react/jsx-no-bind, jsx-a11y/no-static-element-interactions
-    <tr onClick={onClick.bind(null, data.id)} >
+    <tr className={className} onClick={onClick.bind(null, data.id)} >
+      <th scope="row" >{data.type !== 'details' ? data.id : '.'}</th>
       {columns.map((column) => {
         const key = `${column.title}-${data.id}`;
         const formatter = column.formatter || (o => o.toString());
@@ -56,10 +59,12 @@ Row.propTypes = {
   ).isRequired,
   show: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
+  className: PropTypes.string,
 };
 
 Row.defaultProps = {
   show: true,
+  className: ''
 };
 
 export default Row;

@@ -66,7 +66,7 @@ export default class Table extends Component {
     const { columns = [] } = this.props;
     return (
       <thead>
-        <tr>{columns.map(column => (<th key={column.title} >{column.title}</th>))}</tr>
+        <tr><th>#</th>{columns.map(column => (<th key={column.title} >{column.title}</th>))}</tr>
       </thead>
     );
   }
@@ -87,6 +87,7 @@ export default class Table extends Component {
             show={show} key={row.id}
             columns={columns}
             data={row}
+            className={row.type || 'data'}
           />
         );
       })
@@ -113,7 +114,7 @@ export default class Table extends Component {
   render() {
     return (
       <div>
-        <table>
+        <table className="table table-striped table-bordered">
           {this.renderHeader()}
           {this.renderBody()}
         </table>

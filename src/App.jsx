@@ -56,7 +56,7 @@ function App() {
     <div className="App" >
       <div className="App-header" >
         <img src={logo} className="App-logo" alt="logo" />
-        <h2>Hello from React-grid</h2>
+        <h3>Hello from React-grid</h3>
       </div>
       <div className="App-intro" >
         <Table data={addDetailsToData(titles, rawData, rawDetails)} columns={columns} />
