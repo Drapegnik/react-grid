@@ -16,8 +16,8 @@ const Row = (props) => {
   }
 
   return (
-    // eslint-disable-next-line react/jsx-no-bind, jsx-a11y/no-static-element-interactions
-    <tr className={className} onClick={onClick.bind(null, data.id)} >
+    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+    <tr className={className} id={data.id} onClick={onClick} >
       <th scope="row" >{data.type !== 'details' ? data.id : '.'}</th>
       {columns.map((column) => {
         const key = `${column.title}-${data.id}`;
@@ -64,7 +64,7 @@ Row.propTypes = {
 
 Row.defaultProps = {
   show: true,
-  className: ''
+  className: '',
 };
 
 export default Row;

@@ -43,7 +43,8 @@ export default class Table extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(id) {
+  handleClick({ target }) {
+    const id = target.parentElement.getAttribute('id');
     const nextId = `details-${id}`;
 
     this.setState((prevState) => {
@@ -66,7 +67,9 @@ export default class Table extends Component {
     const { columns = [] } = this.props;
     return (
       <thead>
-        <tr><th>#</th>{columns.map(column => (<th key={column.title} >{column.title}</th>))}</tr>
+        <tr>
+          <th>#</th>
+          {columns.map(column => (<th key={column.title} >{column.title}</th>))}</tr>
       </thead>
     );
   }
@@ -114,7 +117,7 @@ export default class Table extends Component {
   render() {
     return (
       <div>
-        <table className="table table-striped table-bordered">
+        <table className="table table-striped table-bordered" >
           {this.renderHeader()}
           {this.renderBody()}
         </table>
