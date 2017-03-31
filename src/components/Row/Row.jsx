@@ -18,7 +18,7 @@ const Row = (props) => {
   return (
     // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <tr className={className} id={data.id} onClick={onClick} >
-      <th scope="row" >{data.type !== 'details' ? data.id : '.'}</th>
+      <th scope="row" >{data.type !== 'details' ? data.id : 'gs'}</th>
       {columns.map((column) => {
         const key = `${column.title}-${data.id}`;
         const formatter = column.formatter || (o => o.toString());
