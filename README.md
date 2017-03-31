@@ -11,6 +11,12 @@ table of data with react
 4. Double click on row hide details
 4. If there is no data - show `no data`
 
+## demo
+![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1490958343/react-grid1.gif)
+
+## demo mobile
+![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1490958465/react-grid2.gif)
+
 ## scripts
 
 ### `npm start`
