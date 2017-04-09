@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-import Row from '../Row';
+import Row from './Row';
 
 /**
  * Reusable Table component
