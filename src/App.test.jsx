@@ -9,6 +9,5 @@ it('renders without crashing', () => {
 
 it('renders welcome message', () => {
   const wrapper = shallow(<App />);
-  const welcome = <h2>Hello from React-grid</h2>;
-  expect(wrapper.contains(welcome)).toEqual(true);
+  expect(wrapper.find('div h3').text()).toEqual('Hello from React-grid');
 });

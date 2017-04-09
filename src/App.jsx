@@ -45,12 +45,12 @@ const addDetailsToData = (titles, data, details) => {
  */
 function App() {
   const columns = [
-    { title: 'tool' },
-    { title: 'initiator', formatter: o => `${o.id}-${o.name}` },
-    { title: 'result' },
-    { title: 'duration', formatter: o => `${o}ms` },
+    { name: 'tool' },
+    { name: 'initiator', formatter: o => `${o.id}-${o.name}` },
+    { name: 'result' },
+    { name: 'duration', title: 'duration (ms)', formatter: o => `${o}ms` },
   ];
-  const titles = columns.map(col => col.title);
+  const titles = columns.map(col => col.name);
 
   return (
     <div className="App" >

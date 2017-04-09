@@ -20,11 +20,11 @@ const Row = (props) => {
     <tr className={className} id={data.id} onClick={onClick} >
       <th scope="row" >{data.type !== 'details' ? data.id : ''}</th>
       {columns.map((column) => {
-        const key = `${column.title}-${data.id}`;
+        const key = `${column.name}-${data.id}`;
         const formatter = column.formatter || (o => o.toString());
 
-        let value = data[column.title];
-        if (value && !data[`notFormat-${column.title}`]) {
+        let value = data[column.name];
+        if (value && !data[`notFormat-${column.name}`]) {
           value = formatter(value);
         }
 
@@ -37,13 +37,13 @@ const Row = (props) => {
 /**
  * propTypes
  * @property {Array} columns - object for set table structure
- * @property {String} columns.title - title for column and key for {@link Table#propTypes#data}
+ * @property {String} columns.name - key for {@link Table#propTypes#data}
  * @property {Function} columns.formatter - function for format {@link Table#propTypes#data}
  * * by default will use {@external Object#toString()}
  * * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString}
  * @property {Object} data object with {@link Table#propTypes#columns} keys
  * @property {String} data.id unique key
- * @property {Boolean} data.notFormat-{columnTitle} - pass false, if don't need to format this data
+ * @property {Boolean} data.notFormat-{columnName} - pass false, if don't need to format this data
  * @property {Boolean} show flag to decide hide or show table row
  */
 Row.propTypes = {
@@ -53,7 +53,7 @@ Row.propTypes = {
   }).isRequired,
   columns: PropTypes.arrayOf(
     PropTypes.shape({
-      title: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
       formatter: PropTypes.func,
     }),
   ).isRequired,

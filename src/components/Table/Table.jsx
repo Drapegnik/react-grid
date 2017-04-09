@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 
 import Row from './Row';
+import './Table.css';
 
 /**
  * Reusable Table component
@@ -10,7 +12,8 @@ export default class Table extends Component {
   /**
    * propTypes
    * @property {Array} columns - object for set table structure
-   * @property {String} columns.title - title for column and key for {@link Table#propTypes#data}
+   * @property {String} columns.name - column and key for {@link Table#propTypes#data}
+   * @property {String} columns.tittle - column tittle to show in table
    * @property {Function} columns.formatter - function for format {@link Table#propTypes#data}
    * * by default will use {@external Object#toString()}
    * * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString}
@@ -22,7 +25,8 @@ export default class Table extends Component {
     })).isRequired,
     columns: PropTypes.arrayOf(
       PropTypes.shape({
-        title: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        title: PropTypes.string,
         formatter: PropTypes.func,
       }),
     ).isRequired,
@@ -68,8 +72,9 @@ export default class Table extends Component {
     return (
       <thead>
         <tr>
-          <th>#</th>
-          {columns.map(column => (<th key={column.title} >{column.title}</th>))}</tr>
+          {columns.length !== 0 && <th>#</th>}
+          {columns.map(column => (<th key={column.name} >{column.title || column.name}</th>))}
+        </tr>
       </thead>
     );
   }
@@ -107,7 +112,11 @@ export default class Table extends Component {
       return null;
     }
 
-    return (<p>No data</p>);
+    return (
+      <div className="no-data alert alert-danger" >
+        <strong>Warning!</strong> No data
+      </div>
+    );
   }
 
   /**
