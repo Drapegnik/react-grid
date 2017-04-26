@@ -41,7 +41,7 @@ Launches the test runner in the interactive watch mode.<br>
 #### Columns formatters example
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1491770908/react-grid4.png)
 
-> [see the all storybok](https://drapegnik.github.io/react-grid/storybook)
+> [see the all storybook](https://drapegnik.github.io/react-grid/storybook)
 
 ### `npm run build`
 Builds the app for production to the `build` folder.<br>
