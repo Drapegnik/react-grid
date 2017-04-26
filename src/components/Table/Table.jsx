@@ -47,10 +47,8 @@ export default class Table extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick({ target }) {
-    const id = target.parentElement.getAttribute('id');
+  handleClick(id) {
     const nextId = `details-${id}`;
-
     this.setState((prevState) => {
       let newIds = [];
       if (prevState.activeDetailsIds.includes(nextId)) {
