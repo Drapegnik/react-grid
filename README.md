@@ -1,6 +1,8 @@
 # React-grid
 table of data with react
 
+> [check website](https://drapegnik.github.io/react-grid/)
+
 ## task
 1. Table with columns: (data from [data.json](https://github.com/Drapegnik/react-grid/tree/master/src/data/data.json))
     * tool
@@ -11,7 +13,7 @@ table of data with react
 4. Double click on row hide details
 4. If there is no data - show `no data`
 
-## demo
+## [demo](https://drapegnik.github.io/react-grid/)
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1490958343/react-grid1.gif)
 
 ## demo mobile
@@ -38,6 +40,8 @@ Launches the test runner in the interactive watch mode.<br>
 
 #### Columns formatters example
 ![](http://res.cloudinary.com/dzsjwgjii/image/upload/v1491770908/react-grid4.png)
+
+> [see the all storybok](https://drapegnik.github.io/react-grid/storybook)
 
 ### `npm run build`
 Builds the app for production to the `build` folder.<br>
