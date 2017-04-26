@@ -1,6 +1,8 @@
 import React from 'react';
+import GitHubForkRibbon from 'react-github-fork-ribbon';
 
 import { Table } from './components';
+
 import logo from './logo.svg';
 import rawData from './data/data.json';
 import rawDetails from './data/details.json';
@@ -54,6 +56,20 @@ function App() {
 
   return (
     <div className="App" >
+      <GitHubForkRibbon
+        position="left"
+        color="red"
+        href="https://github.com/Drapegnik/react-grid"
+        target="_blank"
+      >Fork me on GitHub
+      </GitHubForkRibbon>
+      <GitHubForkRibbon
+        position="orange"
+        color="green"
+        href="https://drapegnik.github.io/react-grid/storybook"
+        target="_blank"
+      >See the storybook
+      </GitHubForkRibbon>
       <div className="App-header" >
         <img src={logo} className="App-logo" alt="logo" />
         <h3>Hello from React-grid</h3>

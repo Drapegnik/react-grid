@@ -25,11 +25,12 @@
     "react-scripts": "0.9.5"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
     "@kadira/storybook": "^2.21.0",
+    "bootstrap": "^3.3.7",
     "enzyme": "^2.8.0",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-github-fork-ribbon": "^0.5.0"
   },
   "repository": {
     "type": "git",
