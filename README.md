@@ -1,5 +1,7 @@
 # React-grid
-table of data with react
+[![Code Climate](https://codeclimate.com/github/Drapegnik/react-grid/badges/gpa.svg)](https://codeclimate.com/github/Drapegnik/react-grid) [![Issue Count](https://codeclimate.com/github/Drapegnik/react-grid/badges/issue_count.svg)](https://codeclimate.com/github/Drapegnik/react-grid)
+
+Reusable data table component on react
 
 > [check website](https://drapegnik.github.io/react-grid/)
 
