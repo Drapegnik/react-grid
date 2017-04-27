@@ -1,5 +1,5 @@
 # React-grid
-[![Code Climate](https://codeclimate.com/github/Drapegnik/react-grid/badges/gpa.svg)](https://codeclimate.com/github/Drapegnik/react-grid) [![Issue Count](https://codeclimate.com/github/Drapegnik/react-grid/badges/issue_count.svg)](https://codeclimate.com/github/Drapegnik/react-grid)
+[![Code Climate](https://codeclimate.com/github/Drapegnik/react-grid/badges/gpa.svg)](https://codeclimate.com/github/Drapegnik/react-grid) [![Build Status](https://travis-ci.org/Drapegnik/react-grid.svg?branch=master)](https://travis-ci.org/Drapegnik/react-grid) [![Issue Count](https://codeclimate.com/github/Drapegnik/react-grid/badges/issue_count.svg)](https://codeclimate.com/github/Drapegnik/react-grid)
 
 Reusable data table component on react
 
