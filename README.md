@@ -1,6 +1,8 @@
 # React-grid
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/049ec6496c9d44648930dfe9b773c9bf)](https://www.codacy.com/app/Drapegnik/react-grid?utm_source=github.com&utm_medium=referral&utm_content=Drapegnik/react-grid&utm_campaign=badger)
-[![Code Climate](https://codeclimate.com/github/Drapegnik/react-grid/badges/gpa.svg)](https://codeclimate.com/github/Drapegnik/react-grid) [![Build Status](https://travis-ci.org/Drapegnik/react-grid.svg?branch=master)](https://travis-ci.org/Drapegnik/react-grid) [![Issue Count](https://codeclimate.com/github/Drapegnik/react-grid/badges/issue_count.svg)](https://codeclimate.com/github/Drapegnik/react-grid) [![Dependency Status](https://www.versioneye.com/user/projects/590280fffda994003e7cb568/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/590280fffda994003e7cb568)
+[![Code Climate](https://codeclimate.com/github/Drapegnik/react-grid/badges/gpa.svg)](https://codeclimate.com/github/Drapegnik/react-grid) 
+[![Build status](https://ci.appveyor.com/api/projects/status/db8u8h9fo01e05l5/branch/master?svg=true)](https://ci.appveyor.com/project/Drapegnik/react-grid/branch/master)
+[![Build Status](https://travis-ci.org/Drapegnik/react-grid.svg?branch=master)](https://travis-ci.org/Drapegnik/react-grid) [![Issue Count](https://codeclimate.com/github/Drapegnik/react-grid/badges/issue_count.svg)](https://codeclimate.com/github/Drapegnik/react-grid) [![Dependency Status](https://www.versioneye.com/user/projects/590280fffda994003e7cb568/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/590280fffda994003e7cb568)
 
 Reusable data table component on react
 
