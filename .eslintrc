@@ -8,5 +8,8 @@
   },
   "env": {
     "browser": true
+  },
+  "rules": {
+    "import/extensions": [2, { "css": "always", "json": "always", "svg": "always" }]
   }
 }
